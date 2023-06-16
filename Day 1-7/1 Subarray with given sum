@@ -1,0 +1,22 @@
+//Company - Amazon
+//Topic - Arrays
+//Link - https://practice.geeksforgeeks.org/problems/subarray-with-given-sum-1587115621/1?page=1&company[]=Amazon&category[]=Arrays&sortBy=submissions
+
+        int left=1,right=1;
+        long long sum=0;
+        sum=arr[right-1];
+        while(sum!=s){
+            if(sum<s){
+                sum+=arr[right++];
+            }
+            if(sum>s){
+                sum-=arr[(left++)-1];
+            }
+            if(right>n||s==0){
+                break;
+            }
+        }
+        if(right>n||s==0)
+            return {-1};
+        else
+            return {left,right};

@@ -1,0 +1,24 @@
+// Company- Amazon
+// Topic- Arrays
+// Link -  https://practice.geeksforgeeks.org/problems/kadanes-algorithm-1587115620/1?page=1&company[]=Amazon&category[]=Arrays&sortBy=submissions
+// Code -
+
+long long current=arr[0], max=arr[0];
+        for(int i=1;i<n;i++){
+            if(arr[i]>=0){
+                if(current>0)
+                    current+=arr[i];
+                else
+                    current=arr[i];
+            }
+            else{
+                if((arr[i]+current)>0)
+                    current+=arr[i];
+                else
+                    current=arr[i];
+            }
+            
+            if(max<current)
+                max=current;
+        }
+        return max;

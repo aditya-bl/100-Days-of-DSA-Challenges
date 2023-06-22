@@ -1,7 +1,17 @@
-//
+// Company - Amazon
+// Topic - Arrays
+// Link - https://practice.geeksforgeeks.org/problems/sort-an-array-of-0s-1s-and-2s4231/1
 
+// Logic - As there are only 3 no.s, you can use a counting sort for easy solution
+//         You just count no of 0s and 1s and 2s by traversing the array
+//         then you just assign them one by one in order till 
+//         all the zeroes are exhausted, then the ones and then the twoes
+//         **** IMPORTANT NOTE: Make sure you use the same array given to you in function arguments
+//              to make the solution, meaning- sort the array given in argument, dont make a new array
+//              as the GFG editor automatically reads your array after function completion
+//              using cout will only double your output and make right answer wrong.
 
-
+//Solution :
         int noOfZeroes=0,noOfOnes=0,noOfTwoes=0;
         for(int i=0;i<n;i++){
             if(a[i]>0){

@@ -2,6 +2,17 @@
 //Topic - Arrays
 //Link - https://practice.geeksforgeeks.org/problems/subarray-with-given-sum-1587115621/1?page=1&company[]=Amazon&category[]=Arrays&sortBy=submissions
 
+//Logic - Follow a approach similar to a caterpillar's bell shaped stride
+//        You keep on adding no.s if the sum is smaller than the required
+//        And increasing your right index
+//        Then if you reach the required sum, stop and give the left and right index
+//        If you your sum gets bigger than the required sum, start removing no.s 
+//        from the left hand side and increasing your left index
+//        If your right index get bigger than length of the array, there is no solution
+//        output -1, same in case if required sum is 0 as the minimum value of any element
+//        is 1 in the problem
+
+//Solution :
         int left=1,right=1;
         long long sum=0;
         sum=arr[right-1];

@@ -1,7 +1,21 @@
 // Company- Amazon
 // Topic- Arrays
 // Link -  https://practice.geeksforgeeks.org/problems/kadanes-algorithm-1587115620/1?page=1&company[]=Amazon&category[]=Arrays&sortBy=submissions
-// Code -
+// Logic - Use two variables current and max
+//         you have be vary of negative no.
+//         any positive no you can add to current
+//         but if ur current is negative you have to make current the positive no. you encountered
+//         if you encounter negative no.s you have to see if their sum with current is a positive or not
+//         if it is positive, you can add 
+//         else make the negative no current positive as adding negative no to already negative current is not going to help
+//         because as long as the current remains positive
+//         it is benificial to add negative no.s as
+//         it gives us a possibility of adding even larger no further on in the array to reach maximum solution
+//         because the solution demands greatest sum amongst all subarrays
+//         after each traversal of array element check to see if current is bigger than max or not
+//         update if yes
+
+// Solution :
 
         long long current=arr[0], max=arr[0];
         for(int i=1;i<n;i++){

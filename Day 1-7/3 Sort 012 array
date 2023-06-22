@@ -1,0 +1,30 @@
+//
+
+
+
+        int noOfZeroes=0,noOfOnes=0,noOfTwoes=0;
+        for(int i=0;i<n;i++){
+            if(a[i]>0){
+                if(a[i]>1)
+                    noOfTwoes++;
+                else
+                    noOfOnes++;
+            }
+            else
+                noOfZeroes++;
+        }
+        for(int i=0;i<n;i++){
+            if(noOfZeroes!=0){
+                a[i]=0;
+                noOfZeroes--;
+            }
+            else{
+                if(noOfOnes!=0){
+                    a[i]=1;
+                    noOfOnes--;
+                }
+                else
+                    a[i]=2;
+            }
+        }
+        
